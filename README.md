@@ -1,0 +1,1 @@
+A simple web blog application built with Django.

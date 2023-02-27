@@ -11,7 +11,7 @@
         <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
     {% endif %}
 
-    <p class="postcontent">{{post.title|safe|linebreaksbr}}</p>
+    <p class="postcontent">{{post.text|safe|linebreaksbr}}</p>
 
     
     {% if user.is_authenticated %}
@@ -30,7 +30,7 @@
     <div class="container">
         
         {% for comment in post.comments.all %}
-        
+
         <br>
         
             {% if user.is_authenticated or comment.approved_comment %}
